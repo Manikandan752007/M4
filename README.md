@@ -62,12 +62,7 @@ Write a C Program to check whether the two numbers are equal or not using simple
 
 int main() {
     int X, Y;
-
-    // Input two numbers
-    printf("Enter value of X: ");
     scanf("%d", &X);
-
-    printf("Enter value of Y: ");
     scanf("%d", &Y);
 
     // Check if X and Y are equal
