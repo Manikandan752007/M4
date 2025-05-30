@@ -58,22 +58,32 @@ Write a C Program to check whether the two numbers are equal or not using simple
 
 ## PROGRAM
 ```
+#include <stdio.h>
 
-#include<stdio.h>
-int main()
-{
-    int a,b;
-    scanf("%d%d",&a,&b);
-    if(a==b)
-    {
-        printf("X is equal to Y");
+int main() {
+    int X, Y;
+
+    // Input two numbers
+    printf("Enter value of X: ");
+    scanf("%d", &X);
+
+    printf("Enter value of Y: ");
+    scanf("%d", &Y);
+
+    // Check if X and Y are equal
+    if (X == Y) {
+        printf("X and Y are equal.\n");
     }
-    else
-    {
-        printf("X is NOT equal to Y");
+
+    if (X != Y) {
+        printf("X and Y are not equal.\n");
     }
+
     return 0;
 }
+
+
+
 ```
 
 
