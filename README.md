@@ -149,18 +149,17 @@ Write a C Program to count the total number of words in a given string using do 
 
 ## PROGRAM
 ```
-#include<stdio.h>
-int main()
-{
-    char a[100];
-    int l=0;
-    fgets(a,sizeof(a),stdin);
-    while(a[l]!='\0')
-    {
-        l++;
-    }
-    printf("%d",l-1);
-    return 0;
+#include <stdio.h>
+int main() {
+   char str[100];
+   printf("Enter the string : ");
+   scanf("%[^\n]",str);
+   int i=0,c=0;
+   do{
+       if(str[i]==' ') c++;
+       i++;
+   }while(str[i]!='\0');
+   printf("\nThe total number of words in the given string is: %d",c);
 }
 ```
 
@@ -201,25 +200,30 @@ Step 8: End the program.
 
 ## PROGRAM
 ```
-#include<stdio.h>
-#include<string.h>
-int main()
-{
-    char str[10];
-    char srt[10];
-    scanf("%s",str);
-    scanf("%s",srt);
-    int s = strcmp(str,srt);
-    if(s==0)
-    {
-        printf("strings are same");
-    }
-    else
-    {
-        printf("strings are not same");
-    }
-    return 0;
+#include <stdio.h>
+int main() {
+   char str1[100], str2[100];
+   printf("Enter the string1 : ");
+   scanf(" %[^\n]",str1);
+   printf("\nEnter the string2 : ");
+   scanf(" %[^\n]",str2);
+   int s1l=0,s2l=0, f = 0;
+   while(str1[s1l]!='\0')s1l++;
+   while(str2[s2l]!='\0')s2l++;
+   if(s1l==s2l){
+      for(int i=0;i<s1l;i++){
+          if(str1[i]!=str2[i]){
+              f=1;
+              break;
+          }
+      } 
+   }
+   else f=1;
+   if(f==0) printf("\nStrings are same");
+   else printf("\nStrings are not same");
+  
 }
+
 ```
 
 
